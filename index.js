@@ -1,3 +1,17 @@
+function showMeToo(){
+  var me = document.getElementById("me")
+  var meToo = document.getElementById("me-too")
+  me.style.display = "none";
+  meToo.style.display = "inline";
+}
+
+function showMe(){
+  var me = document.getElementById("me")
+  var meToo = document.getElementById("me-too")
+  me.style.display = "inline";
+  meToo.style.display = "none";
+}
+
 $(document).ready(function(){
   new Chart(document.getElementById("randar-chart"), {
       "type": "radar",
@@ -7,12 +21,12 @@ $(document).ready(function(){
                   "label": "目前研究方向",
                   "data": [95, 70, 90, 25, 90,  45],
                   "fill": true,
-                  "backgroundColor": "rgba(255, 99, 132, 0.2)",
-                  "borderColor": "rgb(255, 99, 132)",
-                  "pointBackgroundColor": "rgb(255, 99, 132)",
+                  "backgroundColor": "rgba(0, 0, 0, 0.2)",
+                  "borderColor": "rgb(0, 0, 0)",
+                  "pointBackgroundColor": "rgb(243, 155, 39)",
                   "pointBorderColor": "#fff",
                   "pointHoverBackgroundColor": "#fff",
-                  "pointHoverBorderColor": "rgb(255, 99, 132)"
+                  "pointHoverBorderColor": "rgb(243, 155, 39)"
               }]
       },
       "options": {
@@ -45,33 +59,25 @@ $(document).ready(function(){
       }
   });
 
-  function showMeToo(){
-    var me = document.getElementById("me")
-    var meToo = document.getElementById("me-too")
-    me.style.display = "none";
-    meToo.style.display = "inline";
-  }
 
-  function showMe(){
-    var me = document.getElementById("me")
-    var meToo = document.getElementById("me-too")
-    me.style.display = "inline";
-    meToo.style.display = "none";
-  }
 
   $(".left-menu,.blog-entry").click(function(){
-    $(".left-side-bar").show().addClass('animated slideInLeft');
+    $(".left-side-bar").addClass('animated slideInLeft show');
   });
 
   $(".right-close").click(function(){
-    $(".left-side-bar").removeClass('animated slideInLeft').hide(500);
+    $(".left-side-bar").removeClass('animated slideInLeft show');
   })
 
   $(".right-menu").click(function(){
-    $(".right-side-bar").show().addClass('animated slideInRight');
+    $(".right-side-bar").addClass('animated slideInRight show');
   });
 
   $(".left-close").click(function(){
-    $(".right-side-bar").removeClass('animated slideInRight').hide(500);
+    $(".right-side-bar").removeClass('animated slideInRight show');
+  })
+
+  $(".portfolio-entry").click(function(){
+    $(".right-side-bar").addClass('animated slideInRight show');
   })
 })

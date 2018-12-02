@@ -57,6 +57,7 @@ html,body {
   width:100%;
   height:100%;
   overflow: hidden;
+	font-family: PingFangSC-Regular, sans-serif;
 }
 .main-body{
   position: absolute;
@@ -83,6 +84,17 @@ html,body {
   background: #000000;
   float: left;
 }
+.right-main-body-content-wrapper {
+	position: absolute;
+	top:0px;
+	left: 0px;
+	right:0px;
+	bottom: 0px;
+	width:100%;
+	height:100%;
+	z-index: 200;
+}
+
 .menu {
   width:31px;
   height:31px;
@@ -102,11 +114,18 @@ html,body {
   background-size: cover;
 }
 .chart-content {
-  width:80%;
+	width:80%;
   height: auto;
   margin:0 auto;
 	margin-top: 3%;
 }
+.star-shape img{
+	width:40%;
+	display: block;
+	margin: 0 auto;
+	padding-top: 32px;
+}
+
 .chart-content canvas{
   /* width:80%; */
 }
@@ -157,10 +176,27 @@ html,body {
   float: left;
   display: block;
 }
+.social-entry a {
+  display: block;
+}
+.social-entry img {
+	width: 24px;
+	height: 24px;
+	/* opacity: 0.8; */
+	margin-left:8px;
+}
+.social-entry img:hover {
+	opacity: 0.3;
+}
 .left-social-footer {
 	position: absolute;
 	bottom: 2%;
 	left: 2%;
+}
+.right-social-footer {
+	position: absolute;
+	bottom: 2%;
+	right: 2%;
 }
 
 .hat-footer {
@@ -174,7 +210,7 @@ html,body {
 	height: auto;
 }
 .blog-entry {
-	width: 200px;
+	width: 150px;
 	height: 48px;
 	border: 2px solid #000000;
 	border-radius: 8px;
@@ -189,8 +225,24 @@ html,body {
 	color:#ffffff;
 }
 
+.portfolio-entry {
+	width: 150px;
+	height: 48px;
+	border: 2px solid #ffffff;
+	border-radius: 8px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 48px;
+	margin: 0 auto;
+	color: white;
+	margin-top: 5%;
+}
+.portfolio-entry:hover{
+	background-color: #ffffff;
+	color: black;
+}
+
 .left-side-bar {
-	display: none;
 	position: absolute;
 	width:100%;
 	height:100%;
@@ -200,7 +252,7 @@ html,body {
 	bottom: 0;
 	background-color: black;
 	z-index: 100;
-	opacity: 0.9;
+	opacity: 0.95;
 }
 .left-side-bar-wrapper {
 	width:100%;
@@ -215,9 +267,11 @@ html,body {
 	background-image: url("./images/close.png");
 	background-size: cover;
 }
-
+.show {
+	visibility:visible !important;
+}
 .side-bar {
-	display: none;
+	visibility:hidden;
 	position: absolute;
 	width:100%;
 	height:100%;
@@ -225,14 +279,15 @@ html,body {
 	left:0;
 	right: 0;
 	bottom: 0;
-	z-index: 100;
-	opacity: 0.9;
+	z-index: 500;
+	opacity: 0.95;
 }
 .left-side-bar {
 	background-color: black;
-	display: block;
+	/* display: block; */
 }
 .right-side-bar {
+	/* visibility: visible; */
 	background-color: white;
 }
 
@@ -274,8 +329,12 @@ html,body {
 }
 
 .left-blog-menu ul > li > a{
-	color:#ffffff;
+	color: #cfcfcf;
 	text-decoration:none;
+}
+
+.left-blog-menu ul > li > a:hover{
+	color:#ffffff;
 }
 
 .blog-list-content{
@@ -304,13 +363,79 @@ html,body {
 .blog-list-item-content {
 	/* border-bottom: 1px solid white; */
 	padding: 2% 0;
+	position: relative;
 }
 .blog-list-item-content ul > li {
 	display: block;
 	line-height: 24px;
 }
 .blog-list-item-content ul > li >a {
-	color:#ffffff;
+	color:#cfcfcf;
 	text-decoration:none;
 	line-height: 18px;
+}
+.blog-list-item-content ul > li >a:hover {
+	color:#ffffff;
+	text-decoration: underline;
+}
+.ninja{
+	width: 10%;
+	position: absolute;
+	right: 48px;
+	top: 60px;
+}
+.jenkins {
+	width: 10%;
+	position: absolute;
+	right: 48px;
+	top: 16px;
+}
+.influxdb {
+	width: 20%;
+	position: absolute;
+	right: 32px;
+	top: 80px;
+}
+.docker {
+	width: 10%;
+	position: absolute;
+	right: 48px;
+	top: 160px;
+}
+.share {
+	width: 20%;
+	position: absolute;
+	right: 24px;
+	top: 16px;
+}
+.derrick {
+	width: 30%;
+	position: absolute;
+	right: 0px;
+	top: 16px;
+}
+.video-bg{
+	position: absolute;
+	width:100%;
+	object-fit:fill;
+	height:100%;
+	top:0px;
+	left:0px;
+	z-index: 0;
+	opacity: 0.8;
+}
+.right-side-bar-content {
+	margin: 20% auto;
+	width:50%;
+}
+.right-side-bar-content img {
+	width: 120px;
+	display: block;
+	float: left;
+}
+.right-side-bar-content p {
+	font-size: 48px;
+	font-weight: 900;
+	line-height: 120px;
+	text-align: center;
 }
